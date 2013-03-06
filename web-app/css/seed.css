@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+#skip a {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+#skip a:focus {
+	position:static;
+	width:auto;
+	height:auto; 	
+}
+div.flash_errors {
+	color: red;
+	font-size: 1.5em;
+	margin: 0px 0 0 205px;
+}
+
+div.flash_status {
+	color: green;
+	font-size: 1.5em;
+    margin: 0px 0 0 205px;
+}
+
+div.flash_empty {
+    font-size: 1.5em;
+    height: 0;
+    margin: 0px 0 0 205px;
+}
+
+table.seed {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  /* IE7, collapse table to remove spacing */
+
+  font-size: 13px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+table.seed th, table.seed td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+table.seed th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table.seed td {
+  vertical-align: top;
+}
+table.seed th + th, table.seed td + td {
+  border-left: 1px solid #ddd;
+}
+table.seed tr + tr td {
+  border-top: 1px solid #ddd;
+}
+p.password_constraints {
+  margin-bottom:0;
+}
+span.required {
+  color:red;
+}
+span.error {
+  color:red;
+}
+
+.headerright{
+    float: right;
+    margin: 7px 10px 0 0;
+    font: 20px/16px Arial, Helvetica, sans-serif;
+    color: #FFF;
+    text-align: right;}
+
+
