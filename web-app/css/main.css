@@ -42,20 +42,21 @@ body {
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	   -moz-box-shadow: 0 0 0.3em #006699;
+	-webkit-box-shadow: 0 0 0.3em #006699;
+	        box-shadow: 0 0 0.3em #006699;
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	border-bottom: solid 2px #006699;
+	height: 82px;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
 .ie7 body,
 .ie8 body {
-	border-color: #255b17;
+	border-color: #006699;
 	border-style: solid;
 	border-width: 0 1px;
 }
@@ -65,7 +66,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #006699;
 }
 
 a:hover, a:active {
@@ -73,7 +74,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #006699;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -90,8 +91,8 @@ img {
 /* GENERAL */
 
 #grailsLogo a {
-	display: inline-block;
-	margin: 1em;
+	position: relative;
+	left: -25px;
 }
 
 .content {
@@ -108,7 +109,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	border-top: solid 2px #006699;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -118,7 +119,7 @@ img {
 }
 
 .footer a {
-	color: #255b17;
+	color: #006699;
 }
 
 .spinner {
@@ -283,7 +284,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: #006699;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
@@ -476,7 +477,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-	background: #E1F2B6;
+	background: #f8f8ff;  
 }
 
 /* PAGINATION */
@@ -593,4 +594,10 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+
+.jqgfirstrow
+{
+	padding: 0;
 }

@@ -18,9 +18,17 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+		<div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'logo.png')}" alt="DOE SEED logo"/></a>
+			<div style="position:relative; right:10px; top:-80px; text-align: right; padding:1.0em">
+				<shiro:authenticated>Welcome <shiro:principal/></shiro:authenticated>&nbsp;
+			</div>
+			<div style="position:relative; right:10px; top:-110px; text-align: right; padding:1.0em">
+				<shiro:authenticated><a href="<g:createLink controller="auth" action="signOut"/>">logout</a></shiro:authenticated>
+				<shiro:notAuthenticated><a href="<g:createLink controller="auth" action="login"/>">login</a></shiro:notAuthenticated>
+			</div>		
+		</div>
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
+		<div class="footer" role="contentinfo">Version <g:meta name="app.version"/></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 		<r:layoutResources />

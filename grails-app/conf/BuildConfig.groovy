@@ -61,6 +61,7 @@ grails.project.dependency.resolution = {
 		compile ":shiro:1.1.4"
 		runtime ":crypto:2.0"
 		runtime ":jquery-ui:1.8.24"
+		compile ":platform-core:1.0.RC5"
         compile ':cache:1.0.1'
     }
 }
