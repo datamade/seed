@@ -42,9 +42,13 @@
 			<div id="header_block" role="banner">
 				<div class="hd-inner">
 					<a href="/" class="branding">SEED [beta] - Standard Energy Efficiency Data Platform</a>
-					<g:if test="${isAuthenticated}">
-						<a href="/cas/logout" class="logout">Logout</a>
-					</g:if>
+			<div style="position:relative; right:10px; top:10px; text-align: right; padding:1.0em">
+				<shiro:authenticated>Welcome <shiro:principal/></shiro:authenticated>&nbsp;
+			</div>
+			<div style="position:relative; right:10px; top:10px; text-align: right; padding:1.0em">
+				<shiro:authenticated><a href="<g:createLink controller="auth" action="signOut"/>">logout</a></shiro:authenticated>
+				<shiro:notAuthenticated><a href="<g:createLink controller="auth" action="login"/>">login</a></shiro:notAuthenticated>
+			</div>		
 					<div class="global-nav" role="navigation">
 						<ul>
 							<li class="first"><g:link controller="index">Home</g:link></li>
@@ -65,7 +69,8 @@
 			</div>
 			
 			<div id="footer_block">
-				<div class="ft-inner"></div>
+				
+				<div class="ft-inner"><div class="footer" role="contentinfo">Version <g:meta name="app.version"/></div></div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,8 @@
 dataSource {
     pooled = true
-    driverClassName = "com.mysql.jdbc.Driver"
+    driverClassName = "org.h2.Driver"
+    username = "sa"
+    password = ""
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -12,25 +14,19 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost/seed"
-			username = "seed"
-			password = "seed"
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/seed"
-			username = "seed"
-			password = "seed"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/yourDB"
-			username = "seed"
-			password = "seed"
+            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
             properties {
                maxActive = -1
