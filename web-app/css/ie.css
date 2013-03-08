@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+button { 
+	border-radius: 0; 
+	text-shadow: none;
+	background:#F00;
+	  }

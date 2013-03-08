@@ -1,0 +1,225 @@
+@CHARSET "UTF-8";
+/* CSS Document */
+
+/* ---------------------------------------------------------------------  [ Structure ] 
+*/
+
+#wrapper_block {width:980px; margin:2em auto;
+  -webkit-box-shadow: 0 0 20px #C0C0C0; 
+     -moz-box-shadow: 0 0 20px #C0C0C0; 
+          box-shadow: 0 0 20px #C0C0C0; 
+		  border:1px solid #CBCBCB;
+		  background: #E2E2E2;
+		} 
+.wp-inner{ position:relative; background:#FFF;}
+
+#header_block { background:#fff;} 
+.hd-inner { position:relative; padding-bottom:0;}
+#body_block {} 
+#body_block .main-content { background:#fff; padding:10px; margin: 0 2em;} 
+#footer_block { background:url(../images/bg_footer.png); height:160px;} /* @test */
+
+
+
+/* ---------------------------------------------------------------------  [ Master Template Configuration ] 
+*/
+
+/* The class describe the location of the Main Block (mb) on the template */
+
+/* Main (block) Content  |mb| 
+*/
+.mb #main_block { float:none; padding:10px; }
+.mb #left_block{display:none}
+.mb #right_block{display:none}
+
+/* Main Content on the left |mb|x|
+ */
+.mb_left #main_block { float:none; width:auto; padding:10px;} 
+.mb_left #right_block{width:210px; float:right;}
+
+.mb_left #left_block{display:none}
+
+/* Main Content on the right |x|mb|
+*/
+.mb_right #main_block { float:none; width:auto;  padding:10px;}
+.mb_right #left_block{ width:170px; float:left;  }
+
+.mb_right #right_block{display:none}
+
+/* Main Content on the center |x|mb|x|
+*/
+.mb_center #main_block { margin:0; float:none; padding:10px;}
+
+.mb_center #left_block {width:170px; float:left}
+.mb_center #right_block {width:170px; float:right}
+
+.inner {padding:10px;}
+
+/* ---------------------------------------------------------------------  [ Grid ] 
+*/
+
+.colx2, .colx2_6030, .colx2_7525, .colx2_8020, .colx3, .colx4 { margin-bottom:10px;}
+
+
+/* 1 Columns equal */
+.colx1 .col {width: 99.98%;}
+
+/* Two Columns equal */
+.colx2 .col {width: 49%;}
+
+/* Two Columns ~[60%|30%] */
+.colx2_6030 .col.first { width: 66%}
+.colx2_6030 .col.last { width: 32% }
+
+/* Two Columns ~[75%|25%] */
+.colx2_7525 .col.first { width: 74.9% }
+.colx2_7525 .col.last { width: 23% }
+
+/* Two Columns ~[80%|20%] */
+.colx2_8020 .col.first { width: 79% }
+.colx2_8020 .col.last { width: 19% }
+
+/* Two Columns ~[20%|80%] */
+.colx2_2080 .col.first { width: 20% }
+.colx2_2080 .col.last { width: 78% }
+
+/* Two Columns ~[30%|30%|30%] */
+.colx3 .col { width: 32%; margin-left: 2%}
+
+/* Two Columns ~[25%|25%|25%|25%] */
+.colx4 .col { width: 23%; margin-left: 2.66% }
+
+.col .inner { padding:10px; background:#CCC} /* @test */
+
+/* ---------------------------------------------------------------------  [ Basic List Styles] 
+*/
+
+/*Vertical*/
+.v {}
+.v {list-style-type:none ; margin:0; padding:0}
+.v a {display: block;color: #000; } 
+.v a:hover{ text-decoration:none;}
+
+/*Horizontal*/
+.h{}
+.h ul {width: 100%; margin:0; padding:0}
+.h li { display: inline; float:left; }
+.h a {float: left;}
+.h a:hover{ background-color: #369; color: #fff;} /* @test */
+
+/* ---------------------------------------------------------------------  [ Typography ] 
+*/
+
+html {font-size:100.01%;}
+body {font-size:80%;color:#292929;font-family: Arial, Helvetica, sans-serif}
+h1, h2, h3, h4, h5, h6 {line-height:normal; font-weight:normal;color:#000;}
+	h1{font-size:2em;margin-bottom:.5em; text-shadow: 1px 1px #fff}	
+	h2{font-size:1.75em;margin-bottom:.5em;padding-top:.2em; }	
+	h3{font-size:1.5em;margin-bottom:.7em;padding-top:.3em;}
+	h4{font-size:1.25em;margin-bottom:.6em; font-weight:bold; color:#0C5D9A; }
+	h5,h6{font-size:1em;margin-bottom:.5em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p {
+	margin-bottom:1.5em;
+	line-height:1.5em;
+	text-align: left;
+}
+p img.left {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
+a:focus, a:hover {color:#000;}
+a {color:#0877AF;text-decoration:underline;}
+blockquote {border-left:1px solid #CCCCCC;font-style:italic;margin-left:2em;margin-bottom:1.5em;line-height:1.5em}
+b, strong{ font-weight: bolder;}
+em, dfn,i,cite {font-style:italic;}
+dfn {font-weight:bold;}
+sup, sub { 	height: 0; line-height:1;vertical-align: baseline;position: relative; font-size:0.8em}
+sup {bottom: 1ex;}
+sub {top:.5ex;}
+abbr, acronym {border-bottom:1px dotted #666;}
+address {margin:0 0 1.5em;font-style:italic;}
+del {color:#666; text-decoration: line-through;}
+pre,samp {font:1em 'courier new','monospace';white-space: pre; display:block; background:#F6F6F2; border:1px solid #CCC; overflow:auto; padding:10px; margin:10px;}
+code{font:1em 'courier new','monospace'; text-transform:capitalize}
+ins { text-decoration:underline;}
+q:before {content: '"'; } q:after {content: '"'; }
+/*li ul, li ol {margin:0;}*/
+li { line-height:1.5em;}
+ul, ol {margin:0 1.5em 1.5em 0;padding-left:3em;}
+ul {list-style-type:disc;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1.5em 0;}
+dl dt {font-weight:bold;}
+dd {margin-left:1.5em; }
+small{ font-size:x-small}
+table {margin-bottom:1.4em;width:100%;}
+th {font-weight:bold;}
+thead th {background:#ccc;}
+th, td, caption {padding:4px 10px 4px 5px;}
+tr.even td {background:#e5ecf9;}
+tfoot {font-style:italic;}
+
+/* 
+######################################################################
+######### MODIFY THIS ONLY if you know what you are doing   ########## 
+######################################################################
+
+*/
+
+
+
+/* ---------------------------------------------------------------------  [ Universal clearfix hack] 
+*/
+.clearfix:after,
+#main_block:after, 
+#left_block:after, 
+#right_block:after, 
+.inner:after, /* structure */
+.colx2:after, 
+.colx2_6030:after, 
+.colx2_7525:after, 
+.colx2_2080:after, 
+.colx2_8020:after, 
+.colx3:after, 
+.colx4:after, /* Columns */
+.form-row:after /* Forms */
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix,
+#left_block, #right_block, .form-row  /* structure */
+{
+	display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix,
+#main_block, #left_block, #right_block, .inner,.form-row /* structure */
+{
+	display: block;
+}
+/* close commented backslash hack */
+
+#main_block, #left_block, #right_block, .inner,.form-row,  /* structure */
+.colx2, .colx2_6030, .colx2_7525, .colx2_2080, .colx2_8020, .colx3, .colx4 /* Columns */
+{
+	zoom: 1;
+}
+
+/* ---------------------------------------------------------------------  [ Float and Clear ] 
+*/
+#body_block, #main_block, #left_block, #right_block { float:left; position:relative; overflow:hidden; }
+#header_block,#body_block,#footer_block { clear:both;} 
+.col { float: left; }
+.col.first, .col.last { margin-left: 0}
+.col.last { float: right }
+.col.center { width:70%; margin:50px auto 0; float:none;}
+#body_block, .colx2, .colx2_6030, .colx2_7525, .colx2_2080, .colx2_8020, .colx3, .colx4 {width: 100%; clear:both }
+.faux {} 

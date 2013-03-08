@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+/* -------------------------------------------------------------- 
+#
+#   gloabl.css
+#   
+#   
+-------------------------------------------------------------- */
+
+/* reset stylesheet to reduce browser inconsistencies in things like default line heights, margins, font sizes, headings[...] */
+@import url("reset.css");
+/* core.css contain all the structure elements for the project [blocks] */
+@import url("core.css");
+/* components.css contain all the Components */
+@import url("components.css");
+
