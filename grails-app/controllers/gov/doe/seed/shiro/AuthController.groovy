@@ -9,6 +9,7 @@ import org.apache.shiro.grails.ConfigUtils
 
 class AuthController {
     def shiroSecurityManager
+	static navigationScope = "user"
 
     def index = { redirect(action: "login", params: params) }
 
