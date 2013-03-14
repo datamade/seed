@@ -59,11 +59,15 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+// db reverse engineer plugin
+grails.plugin.reveng.packageName = 'gov.doe.seed'
+
 environments {
     development {
         grails.logging.jul.usebridge = true
 		grails.dbconsole.urlRoot = '/developer/dbconsole'
 		grails.dbconsole.enabled = true
+		
     }
 	test {
         grails.logging.jul.usebridge = true

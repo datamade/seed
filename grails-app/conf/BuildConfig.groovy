@@ -63,5 +63,6 @@ grails.project.dependency.resolution = {
 		runtime ":jquery-ui:1.8.24"
 		compile ":platform-core:1.0.RC5"
         compile ':cache:1.0.1'
+		runtime ':db-reverse-engineer:0.5'
     }
 }

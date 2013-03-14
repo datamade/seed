@@ -81,4 +81,9 @@ span.error {
     color: #FFF;
     text-align: right;}
 
-
+.shiro-block {
+	position: absolute; 
+	right: 60px; 
+	top: 30px; 
+	text-align: right; 
+}
