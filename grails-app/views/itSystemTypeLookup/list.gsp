@@ -31,7 +31,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="partial">
 		<g:set var="entityName" value="${message(code: 'itSystemTypeLookup.label', default: 'ItSystemTypeLookup')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>

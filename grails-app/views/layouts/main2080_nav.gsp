@@ -43,7 +43,7 @@
 			</div>
 			<div id="header_block" role="banner">
 				<div class="hd-inner">
-					<a href="/" class="branding">SEED [beta] - Standard Energy
+					<a href="${createLink(uri: '/')}" class="branding">SEED [beta] - Standard Energy
 						Efficiency Data Platform</a>
 					<div class="shiro-block">
 						<shiro:authenticated>Welcome <shiro:principal /><br/>

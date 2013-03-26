@@ -13,8 +13,10 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://seed.localhost/seed"
+			dbCreate = 'create'
+			url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+//  dbCreate = "" // one of 'create', 'create-drop', 'update', 'validate', ''			
+//            url = "jdbc:mysql://seed.localhost/seed"
         }
     }
     test {

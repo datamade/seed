@@ -32,23 +32,28 @@
 	href="${resource(dir: 'css', file: 'jquery-ui.css')}" />
 
 <g:layoutHead />
+	<g:javascript library="application" />
+   <g:javascript library='jquery' />
 <r:layoutResources />
 </head>
 <body>
-	<g:javascript library="application" />
 	<div id="wrapper_block" role="application">
 		<div class="wp-inner">
-			<div id="skip"><a href="#main-content" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;" /></a></div>
+			<div id="skip">
+				<a href="#main-content" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;" /></a>
+			</div>
 			<div id="header_block" role="banner">
 				<div class="hd-inner">
-					<a href="/" class="branding">SEED [beta] - Standard Energy Efficiency Data Platform</a>
-			<div style="position:relative; right:10px; top:10px; text-align: right; padding:1.0em">
-				<shiro:authenticated>Welcome <shiro:principal/></shiro:authenticated>&nbsp;
-			</div>
-			<div style="position:relative; right:10px; top:10px; text-align: right; padding:1.0em">
-				<shiro:authenticated><a href="<g:createLink controller="auth" action="signOut"/>">logout</a></shiro:authenticated>
-				<shiro:notAuthenticated><a href="<g:createLink controller="auth" action="login"/>">login</a></shiro:notAuthenticated>
-			</div>		
+					<a href="${createLink(uri: '/')}" class="branding">SEED [beta] - Standard Energy
+						Efficiency Data Platform</a>
+					<div class="shiro-block">
+						<shiro:authenticated>Welcome <shiro:principal /><br/>
+						<a href="<g:createLink controller="auth" action="signOut"/>">Logout</a>
+						</shiro:authenticated>
+						<shiro:notAuthenticated>
+							<a href="<g:createLink controller="auth" action="login"/>">Login</a>
+						</shiro:notAuthenticated>
+					</div>
 					<div class="global-nav" role="navigation">
 						<ul>
 							<li class="first"><g:link controller="index">Home</g:link></li>
@@ -59,18 +64,43 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="body_block" class="mb">
 				<div class="bd-inner">
 					<div id="main_block">
-						<g:layoutBody />
+						<div class="main-content" role="main">
+							<div class="colx2_2080">
+								<div class="col first">
+									<nav:primary />
+									<div id="user-nav">
+										<nav:menu scope="user" />
+									</div>
+									<div id="primary-nav">
+										<nav:menu scope="primary" />
+									</div>
+									<div id="admin-nav">
+										<nav:menu scope="admin" />
+									</div>
+								</div>
+								<div class="col last faux section-wp">
+									<g:layoutBody />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div id="footer_block">
-				
-				<div class="ft-inner"><div class="footer" role="contentinfo">Version <g:meta name="app.version"/></div></div>
+
+				<div class="ft-inner">
+					<div class="footer" role="contentinfo">
+						<div class="footer-version">
+							Version
+							<g:meta name="app.version" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

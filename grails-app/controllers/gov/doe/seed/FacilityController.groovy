@@ -34,8 +34,9 @@ class FacilityController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def index(Long id) {
+        def facilityInstance = Facility.get(id)
+        [facilityInstance: facilityInstance]
     }
 
     def list(Integer max) {

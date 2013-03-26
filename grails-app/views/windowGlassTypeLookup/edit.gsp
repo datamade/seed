@@ -30,7 +30,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="partial">
 		<g:set var="entityName" value="${message(code: 'windowGlassTypeLookup.label', default: 'WindowGlassTypeLookup')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>

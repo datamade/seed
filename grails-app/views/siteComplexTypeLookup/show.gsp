@@ -31,7 +31,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="partial">
 		<g:set var="entityName" value="${message(code: 'siteComplexTypeLookup.label', default: 'SiteComplexTypeLookup')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
