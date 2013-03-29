@@ -34,16 +34,26 @@ class FacilityController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    def index(Long id) {
-        def facilityInstance = Facility.get(id)
-        [facilityInstance: facilityInstance]
+	/*
+	 * Creates a UI for editing all the various parts of the Facility
+	 */
+    def index(Integer max) {
     }
 
+	/*
+	 * Creates a UI for selecting facilities (the actual facility list loads
+	 * into the body by calling list asynchronously) 
+	 */
+	def editor(Long id) {
+		def facilityInstance = Facility.get(id)
+		[facilityInstance: facilityInstance]
+	}	
+	
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [facilityInstanceList: Facility.list(params), facilityInstanceTotal: Facility.count()]
     }
-
+	
     def create() {
         [facilityInstance: new Facility(params)]
     }

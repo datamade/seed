@@ -52,36 +52,24 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="operatorTypeIdFk" title="${message(code: 'facility.operatorTypeIdFk.label', default: 'Operator Type Id Fk')}" />
+						<g:sortableColumn property="facilityName" title="${message(code: 'facility.facilityName.label', default: 'Facility')}" />
+					<!--  TODO, need a source from somewhere -->
+						<g:sortableColumn property="XXXXXX" title="${message(code: 'facility.source.label', default: 'Source')}" />
 					
-						<g:sortableColumn property="yearCompleted" title="${message(code: 'facility.yearCompleted.label', default: 'Year Completed')}" />
-					
-						<g:sortableColumn property="yearOccupied" title="${message(code: 'facility.yearOccupied.label', default: 'Year Occupied')}" />
-					
-						<g:sortableColumn property="bldgFootprintArea" title="${message(code: 'facility.bldgFootprintArea.label', default: 'Bldg Footprint Area')}" />
-					
-						<g:sortableColumn property="perimeter" title="${message(code: 'facility.perimeter.label', default: 'Perimeter')}" />
-					
-						<g:sortableColumn property="grossFloorArea" title="${message(code: 'facility.grossFloorArea.label', default: 'Gross Floor Area')}" />
-					
+						<g:sortableColumn property="address1" title="${message(code: 'facility.address1.label', default: 'Address')}" />				
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${facilityInstanceList}" status="i" var="facilityInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${facilityInstance.id}">${fieldValue(bean: facilityInstance, field: "operatorTypeIdFk")}</g:link></td>
+						<td><g:link action="show" id="${facilityInstance.id}">${fieldValue(bean: facilityInstance, field: "facilityName")}</g:link></td>
 					
-						<td>${fieldValue(bean: facilityInstance, field: "yearCompleted")}</td>
+						<td>source</td>
 					
-						<td>${fieldValue(bean: facilityInstance, field: "yearOccupied")}</td>
+						<td>${fieldValue(bean: facilityInstance, field: "address1")}</td>
 					
-						<td>${fieldValue(bean: facilityInstance, field: "bldgFootprintArea")}</td>
-					
-						<td>${fieldValue(bean: facilityInstance, field: "perimeter")}</td>
-					
-						<td>${fieldValue(bean: facilityInstance, field: "grossFloorArea")}</td>
-					
+				
 					</tr>
 				</g:each>
 				</tbody>

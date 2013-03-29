@@ -54,28 +54,67 @@
 
 	</head>
 	<body>
-		<g:javascript library="jquery" />
-		
-		<fieldset id="param section" >
-			<legend>Filter</legend>
-			<g:textField name="query" id="query"/>
-			<label for="sources">
-				<g:message code="facility.index.sources.label" default="Sources" />		
-			</label>
-			<!--  TODO: need real source list -->
-			<g:select name="sources" id="sources" from="${["PLUTO","PM"]}" />
-			<button onclick="loadFacilityList()">Refresh</button>
-		</fieldset>
+		<g:javascript src="jquery.jstree.js" />
+		<script type="text/javascript">
+			$(function () {
+		    $("#tree-container").jstree({
+		        "json_data" : {
+		            "data" : [
+		                {
+		                    "data" : "123 Main Street",
+		                    "metadata" : { domain: 'facility', id : 23 },
+		                    "state" : "open",
+		                    "children" : [
+	                         { 
+	                         	"data" : "Activity Areas",
+	                    		"metadata" : { domain: 'activityArea', id : 23 }
+	                         },
+	                         { 
+	                         	"data" : "Certifications",
+	                    		"metadata" : { domain: 'certificationRating', id : 23 }
+		                     },
+	                         { 
+	                         	"data" : "Metrics",
+			                    "state" : "open",
+	                         	"children" : ["Energy Use", "Financial", "Water Use"]
+	                         },
+	                         { 
+	                         	"data" : "Systems",
+			                    "state" : "open",
+	                         	"children" : ["Air Distribution", "Conveying", "Cooking"]
+		                     }]
+		                }
+		            ]
+		        },
+		        "themes" : {
+		        	            "theme" : "classic"
+		        	        },
 
-	    <div id="remote"></div>
-			<script type="text/javascript">
-			function loadFacilityList()
-			{
-				$("#remote").load("${createLink(action: 'list')}", { 'search': '$("#query")', 'sources': '$("#sources")'}); 
-			}
+		        "plugins" : [ "themes", "json_data", "ui" ]
+		
+		    }).bind("select_node.jstree", function (e, data) { loadRemoteForm(data.rslt.obj.data("domain"),data.rslt.obj.data("id")); });
+		});	
 			
-			// Initial load
-			$("#remote").load("${createLink(action: 'list')}");
+		/* when ready add: "ajax" : { "url" : "${createLink(uri: '/')}facility/getJsonTree/id" } */	
+			
+	</script>
+	<div id="tree">
+		<fieldset id="tree-container"></fieldset>
+		</div>
+		<div id="edit-pane" >
+				<fieldset>
+				  <legend id="edit-legend">Edit Facility: 123 Main St.</legend> <!--  will be: ${facility?.name } -->
+				  <div id="remote"></div>
+				</fieldset>
+		</div>
+			<script type="text/javascript">
+			function loadRemoteForm(controller, id)
+			{
+				if (controller)
+				{
+					$("#remote").load("${createLink(uri: '/')}" + controller + "/create"); // Will be "/edit/" + id
+				}
+			}
 		</script>
 	</body>
 </html>

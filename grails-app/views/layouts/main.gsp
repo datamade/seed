@@ -32,8 +32,8 @@
 	href="${resource(dir: 'css', file: 'jquery-ui.css')}" />
 
 <g:layoutHead />
-	<g:javascript library="application" />
-   <g:javascript library='jquery' />
+<g:javascript library="application" />
+<g:javascript library='jquery' />
 <r:layoutResources />
 </head>
 <body>
