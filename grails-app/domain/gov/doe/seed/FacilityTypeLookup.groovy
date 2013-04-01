@@ -12,11 +12,6 @@ class FacilityTypeLookup {
 	static hasMany = [facilities: Facility,
 	                  operatorTypeLookups: OperatorTypeLookup]
 
-	static mapping = {
-		id column: "facility_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		facilityType nullable: true, maxSize: 100
 		facilityTypeDescription nullable: true, maxSize: 100

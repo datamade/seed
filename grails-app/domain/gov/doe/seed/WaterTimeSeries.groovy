@@ -15,11 +15,6 @@ class WaterTimeSeries {
 
 	static belongsTo = [WaterUseMetric]
 
-	static mapping = {
-		id column: "water_time_series_id_pk"
-		version false
-	}
-
 	static constraints = {
 		readingNumber nullable: true
 		intervalPeak nullable: true, maxSize: 45

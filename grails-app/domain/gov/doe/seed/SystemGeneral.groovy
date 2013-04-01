@@ -32,11 +32,6 @@ class SystemGeneral {
 
 	static belongsTo = [HvacCtrlStrategyLookup, HvacEmcsLookup, HvacIndvControlLookup, RegHvacMainLookup, System, ThermostatProgTimeLookup]
 
-	static mapping = {
-		id column: "system_general_id_pk"
-		version false
-	}
-
 	static constraints = {
 		programmableThermostatsUsed nullable: true
 		standardThermostats nullable: true

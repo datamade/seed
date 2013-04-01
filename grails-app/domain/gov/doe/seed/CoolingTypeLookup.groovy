@@ -11,11 +11,6 @@ class CoolingTypeLookup {
 
 	static hasMany = [systemCoolings: SystemCooling]
 
-	static mapping = {
-		id column: "cooling_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		coolingType maxSize: 100
 		createdBy maxSize: 45

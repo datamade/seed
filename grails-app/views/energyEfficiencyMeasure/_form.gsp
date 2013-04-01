@@ -271,6 +271,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: energyEfficiencyMeasureInstance, field: 'energyStarApplications', 'error')} ">
+	<label for="energyStarApplications">
+		<g:message code="energyEfficiencyMeasure.energyStarApplications.label" default="Energy Star Applications" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${energyEfficiencyMeasureInstance?.energyStarApplications?}" var="e">
+    <li><g:link controller="energyStarApplication" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="energyStarApplication" action="create" params="['energyEfficiencyMeasure.id': energyEfficiencyMeasureInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'energyStarApplication.label', default: 'EnergyStarApplication')])}</g:link>
+</li>
+</ul>
+
+</div>
+
+
 <div class="fieldcontain ${hasErrors(bean: energyEfficiencyMeasureInstance, field: 'costEffScreeningLookup', 'error')} required">
 	<label for="costEffScreeningLookup">
 		<g:message code="energyEfficiencyMeasure.costEffScreeningLookup.label" default="Cost Eff Screening Lookup" />

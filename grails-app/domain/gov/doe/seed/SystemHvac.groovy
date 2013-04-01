@@ -16,11 +16,6 @@ class SystemHvac {
 
 	static belongsTo = [ControlTypeSystemLookup, FuelTypeLookup, OtherHvacTypeLookup, SystemHvacLocationLookup]
 
-	static mapping = {
-		id column: "system_hvac_id_pk"
-		version false
-	}
-
 	static constraints = {
 		systemIdFk nullable: true
 		quantityHvac nullable: true

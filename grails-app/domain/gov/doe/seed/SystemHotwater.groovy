@@ -22,11 +22,6 @@ class SystemHotwater {
 
 	static belongsTo = [ControlTypeSystemLookup, EfficiencyUnitSystemLookup, FuelTypeLookup, ResTempLookup, ServiceHotwaterLookup, System, SystemHotwaterLocationLookup]
 
-	static mapping = {
-		id column: "system_hotwater_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityHotWater nullable: true
 		sizeHotWater nullable: true

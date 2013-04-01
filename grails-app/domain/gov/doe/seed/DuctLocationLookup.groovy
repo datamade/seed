@@ -11,11 +11,6 @@ class DuctLocationLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "duct_location_id_pk"
-		version false
-	}
-
 	static constraints = {
 		ductLocation nullable: true, maxSize: 45
 		createdBy maxSize: 45

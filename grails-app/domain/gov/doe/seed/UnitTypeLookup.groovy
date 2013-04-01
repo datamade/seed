@@ -14,11 +14,6 @@ class UnitTypeLookup {
 	                  systemOnsites: SystemOnsite,
 	                  waterUseMetrics: WaterUseMetric]
 
-	static mapping = {
-		id column: "unit_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		unitType nullable: true, maxSize: 100
 		unitTypeDescription nullable: true, maxSize: 100

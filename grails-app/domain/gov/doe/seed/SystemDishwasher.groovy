@@ -12,11 +12,6 @@ class SystemDishwasher {
 
 	static belongsTo = [DishwaterTypeLookup, FuelTypeLookup, System]
 
-	static mapping = {
-		id column: "system_dishwasher_id_pk"
-		version false
-	}
-
 	static constraints = {
 		yearOfManuDishwasher nullable: true
 		energyStarDishwasher nullable: true

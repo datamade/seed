@@ -11,11 +11,6 @@ class WindowGlassLayerLookup {
 
 	static hasMany = [systemFenestrations: SystemFenestration]
 
-	static mapping = {
-		id column: "window_glass_layer_id_pk"
-		version false
-	}
-
 	static constraints = {
 		windowGlassLayers maxSize: 100
 		createdBy maxSize: 45

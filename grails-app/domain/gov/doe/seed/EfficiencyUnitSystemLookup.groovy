@@ -11,8 +11,4 @@ class EfficiencyUnitSystemLookup {
 	                  systemHotwaters: SystemHotwater]
 	static belongsTo = [EfficiencyUnitLookup, SystemTypeLookup]
 
-	static mapping = {
-		id column: "efficiency_unit_system_id_pk"
-		version false
-	}
 }

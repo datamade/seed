@@ -13,11 +13,6 @@ class ThermostatProgTimeLookup {
 	static mappedBy = [systemGeneralsForAcAdjustedIdFk: "thermostatProgTimeLookupByAcAdjustedIdFk",
 	                   systemGeneralsForHeatLoweredIdFk: "thermostatProgTimeLookupByHeatLoweredIdFk"]
 
-	static mapping = {
-		id column: "thermostat_prog_time_id_pk"
-		version false
-	}
-
 	static constraints = {
 		thermostatProgrammableTime nullable: true, maxSize: 45
 		sortOrder nullable: true

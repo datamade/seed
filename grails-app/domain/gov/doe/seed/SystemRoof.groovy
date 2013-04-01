@@ -23,11 +23,6 @@ class SystemRoof {
 
 	static belongsTo = [AtticInsulationLookup, AtticTypeLookup, RoofColorLookup, RoofDeckTypeLookup, RoofInsulationType, RoofSlopeLookup, RoofTypeLookup, System]
 
-	static mapping = {
-		id column: "system_roof_id_pk"
-		version false
-	}
-
 	static constraints = {
 		locationAtticIdFk nullable: true
 		roofRValue nullable: true

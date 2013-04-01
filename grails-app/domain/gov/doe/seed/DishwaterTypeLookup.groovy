@@ -11,11 +11,6 @@ class DishwaterTypeLookup {
 
 	static hasMany = [systemDishwashers: SystemDishwasher]
 
-	static mapping = {
-		id column: "dishwasher_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		dishwasherType maxSize: 100
 		sortOrder nullable: true

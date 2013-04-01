@@ -11,13 +11,10 @@ class Implementer {
 	String implPhone
 	ImplQualificationLookup implQualificationLookup
 	ImplMemberCertLookup implMemberCertLookup
+	EnergyEfficiencyMeasure energyEfficiencyMeasure
+	
 
-	static belongsTo = [ImplMemberCertLookup, ImplQualificationLookup]
-
-	static mapping = {
-		id column: "implementer_id_pk"
-		version false
-	}
+	static belongsTo = [ImplMemberCertLookup, ImplQualificationLookup, EnergyEfficiencyMeasure]
 
 	static constraints = {
 		implName nullable: true, maxSize: 45

@@ -32,10 +32,6 @@ class System {
 	                  systemZonalHeatings: SystemZonalHeating]
 	static belongsTo = [Facility, SystemTypeLookup]
 
-	static mapping = {
-		id column: "system_id_pk"
-		version false
-	}
 
 	static constraints = {
 		createdBy maxSize: 45

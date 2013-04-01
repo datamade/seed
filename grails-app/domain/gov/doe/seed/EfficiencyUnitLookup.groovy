@@ -12,11 +12,6 @@ class EfficiencyUnitLookup {
 
 	static hasMany = [efficiencyUnitSystemLookups: EfficiencyUnitSystemLookup]
 
-	static mapping = {
-		id column: "efficiency_unit_id_pk", generator: "assigned"
-		version false
-	}
-
 	static constraints = {
 		systemTypeIdFk nullable: true
 		efficiencyUnit nullable: true, maxSize: 45

@@ -11,10 +11,6 @@ class ActivityAreaTypeLookup {
 
 	static hasMany = [activityAreas: ActivityArea]
 
-	static mapping = {
-		id column: "activity_area_type_id_pk"
-		version false
-	}
 
 	static constraints = {
 		activityAreaType nullable: true, maxSize: 100

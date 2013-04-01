@@ -32,11 +32,6 @@ class EnergyUseMetric {
 	static hasMany = [energyTimeSerieses: EnergyTimeSeries]
 	static belongsTo = [EndUseTypeLookup, Facility, FuelInterruptLookup, FuelTypeLookup, IntervalTypeLookup, MeterConfigLookup, ReadingTypeLookup, SharedEnergyLookup, UnitTypeLookup, WaterUseTypeLookup]
 
-	static mapping = {
-		id column: "energy_use_metric_id_pk"
-		version false
-	}
-
 	static constraints = {
 		identifier nullable: true
 		completeFuelInd nullable: true

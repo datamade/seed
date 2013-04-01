@@ -11,11 +11,6 @@ class HeatRecoveryLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "heat_recovery_type_id_fk"
-		version false
-	}
-
 	static constraints = {
 		heatRecoveryType nullable: true, maxSize: 45
 		sortOrder nullable: true

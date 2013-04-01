@@ -11,11 +11,6 @@ class FanControlTypeLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "fan_control_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		fanControlType nullable: true, maxSize: 45
 		sortOrder nullable: true

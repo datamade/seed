@@ -11,11 +11,6 @@ class ConveyanceTypeLookup {
 
 	static hasMany = [systemConveyances: SystemConveyance]
 
-	static mapping = {
-		id column: "conveyance_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		conveyanceType maxSize: 100
 		createdBy maxSize: 45

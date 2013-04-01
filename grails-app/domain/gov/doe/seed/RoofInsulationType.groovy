@@ -11,11 +11,6 @@ class RoofInsulationType {
 
 	static hasMany = [systemRoofs: SystemRoof]
 
-	static mapping = {
-		id column: "roof_insulation_id_pk"
-		version false
-	}
-
 	static constraints = {
 		roofInsulationType maxSize: 100
 		createdBy nullable: true, maxSize: 45

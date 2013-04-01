@@ -10,11 +10,6 @@ class RegHvacMainLookup {
 
 	static hasMany = [systemGenerals: SystemGeneral]
 
-	static mapping = {
-		id column: "regular_hvac_maint_id_pk"
-		version false
-	}
-
 	static constraints = {
 		regularHvacMaintenance maxSize: 100
 		createdBy maxSize: 45

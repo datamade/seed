@@ -11,11 +11,6 @@ class HeatingSourceLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "heating_source_id_pk"
-		version false
-	}
-
 	static constraints = {
 		heatingSource nullable: true, maxSize: 45
 		sortOrder nullable: true

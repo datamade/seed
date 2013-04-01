@@ -12,11 +12,6 @@ class SystemOnsite {
 
 	static belongsTo = [FuelTypeLookup, OnsiteGenTypeLookup, System, UnitTypeLookup]
 
-	static mapping = {
-		id column: "system_onsite_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityOnsite nullable: true
 		capacityOnsite nullable: true

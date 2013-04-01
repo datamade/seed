@@ -31,6 +31,7 @@ class EnergyEfficiencyMeasure {
 	String auditId
 	String measureId
 	String notes
+	Implementer implementer
 	LotConfigurationLookup lotConfigurationLookup
 	EntityWorkPerformedLookup entityWorkPerformedLookup
 	MeasureListLookup measureListLookup
@@ -39,13 +40,8 @@ class EnergyEfficiencyMeasure {
 	CostEffScreeningLookup costEffScreeningLookup
 
 	static hasMany = [audits: Audit,
-	                  energyEffReports: EnergyEffReport]
+	                  energyEffReports: EnergyEffReport, implementer: Implementer]
 	static belongsTo = [CostEffScreeningLookup, EntityWorkPerformedLookup, Facility, ImplementStatusLookup, LotConfigurationLookup, MeasureListLookup]
-
-	static mapping = {
-		id column: "ee_measures_id_pk"
-		version false
-	}
 
 	static constraints = {
 		scope nullable: true

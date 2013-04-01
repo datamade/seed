@@ -12,11 +12,6 @@ class SystemTypeLookup {
 	                  efficiencyUnitSystemLookups: EfficiencyUnitSystemLookup,
 	                  systems: System]
 
-	static mapping = {
-		id column: "system_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		systemType nullable: true, maxSize: 100
 		createdBy nullable: true, maxSize: 45

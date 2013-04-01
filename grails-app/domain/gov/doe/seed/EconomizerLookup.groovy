@@ -11,11 +11,6 @@ class EconomizerLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "economizer_id_pk"
-		version false
-	}
-
 	static constraints = {
 		economizer nullable: true, maxSize: 45
 		sortOrder nullable: true

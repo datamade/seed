@@ -387,6 +387,18 @@
 					
 				</li>
 				</g:if>
+				
+				<g:if test="${energyEfficiencyMeasureInstance?.energyStarApplications}">
+				<li class="fieldcontain">
+					<span id="energyStarApplications-label" class="property-label"><g:message code="energyEfficiencyMeasure.energyStarApplications.label" default="Energy Star Applications" /></span>
+					
+						<g:each in="${energyEfficiencyMeasureInstance.energyStarApplications}" var="e">
+						<span class="property-value" aria-labelledby="energyStarApplications-label"><g:link controller="energyStarApplication" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+
 			
 			</ol>
 			<g:form>

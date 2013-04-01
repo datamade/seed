@@ -5,23 +5,24 @@ class CertificationRating {
 	String certificationRating
 	Integer certificationYear
 	String createdBy
-	Date createdDate
 	String updatedBy
-	Date updatedDate
 	BuildingCertificationTypeLookup buildingCertificationTypeLookup
 	Facility facility
+	Date createdDate
+	Date updatedDate
+	
 
 	static belongsTo = [BuildingCertificationTypeLookup, Facility]
-
-	static mapping = {
-		id column: "certification_rating_id_pk"
-		version false
-	}
 
 	static constraints = {
 		certificationRating nullable: true, maxSize: 45
 		certificationYear nullable: true
 		createdBy maxSize: 45
 		updatedBy maxSize: 45
+		buildingCertificationTypeLookup nullable: true
+		facility nullable: true
+		createdDate nullable: true
+		updatedDate nullable: true
+		
 	}
 }

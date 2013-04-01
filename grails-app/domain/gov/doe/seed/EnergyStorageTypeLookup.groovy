@@ -10,11 +10,6 @@ class EnergyStorageTypeLookup {
 
 	static hasMany = [systemEnergyStorages: SystemEnergyStorage]
 
-	static mapping = {
-		id column: "energy_storage_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		energyStorageType maxSize: 100
 		createdBy maxSize: 45

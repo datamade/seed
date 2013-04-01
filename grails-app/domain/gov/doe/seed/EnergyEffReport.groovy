@@ -10,11 +10,6 @@ class EnergyEffReport {
 
 	static belongsTo = [EnergyEfficiencyMeasure]
 
-	static mapping = {
-		id column: "energy_eff_report_id_pk"
-		version false
-	}
-
 	static constraints = {
 		eerSubmittedBy nullable: true, maxSize: 45
 		eerSubmittedComp nullable: true, maxSize: 45

@@ -11,21 +11,18 @@ class CommercialFacility {
 	String buildingOperatorCertNum
 	String buildingOperatorCertState
 	String createdBy
-	Date createdDate
 	String updatedBy
-	Date updatedDate
 	OwnerTypeLookup ownerTypeLookup
 	CommercialFacilityLookup commercialFacilityLookup
 	Facility facility
 	BuildingOperCertLookup buildingOperCertLookup
+	Date createdDate
+	Date updatedDate
 
 	static belongsTo = [BuildingOperCertLookup, CommercialFacilityLookup, Facility, OwnerTypeLookup]
-
-	static mapping = {
-		id column: "commercial_facility_id_pk"
-		version false
-	}
-
+	
+	static hasMany = [activityAreas: ActivityArea]
+	
 	static constraints = {
 		percentOccupiedByOwner nullable: true
 		noOfActivityAreas nullable: true
@@ -37,5 +34,11 @@ class CommercialFacility {
 		buildingOperatorCertState nullable: true, maxSize: 45
 		createdBy maxSize: 45
 		updatedBy maxSize: 45
+		ownerTypeLookup nullable: true
+		commercialFacilityLookup nullable: true
+		buildingOperCertLookup nullable: true
+		facility nullable: true
+		createdDate nullable: true
+		updatedDate nullable: true
 	}
 }

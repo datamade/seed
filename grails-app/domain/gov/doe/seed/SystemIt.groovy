@@ -12,11 +12,6 @@ class SystemIt {
 
 	static belongsTo = [ItSystemTypeLookup, System]
 
-	static mapping = {
-		id column: "system_it_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityIt nullable: true
 		electricalPlugIntensity nullable: true

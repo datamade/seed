@@ -11,11 +11,6 @@ class EnergyStarAppStatusLookup {
 
 	static hasMany = [energyStarApplications: EnergyStarApplication]
 
-	static mapping = {
-		id column: "energy_star_app_status_id_pk"
-		version false
-	}
-
 	static constraints = {
 		energyStarAppStatus nullable: true, maxSize: 45
 		sortOrder nullable: true

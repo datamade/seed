@@ -15,11 +15,6 @@ class SystemWall {
 
 	static belongsTo = [ExtWallColorLookup, ExtWallTypeLookup, System, WallInsulationTypeLookup, WallTightnessLookup]
 
-	static mapping = {
-		id column: "system_wall_id_pk"
-		version false
-	}
-
 	static constraints = {
 		wallRValue nullable: true
 		percTotWallArea nullable: true

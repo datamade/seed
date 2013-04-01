@@ -122,6 +122,18 @@
 					
 				</li>
 				</g:if>
+				
+				<g:if test="${commercialFacilityInstance?.activityAreas}">
+				<li class="fieldcontain">
+					<span id="activityAreas-label" class="property-label"><g:message code="commercialFacility.activityAreas.label" default="Activity Areas" /></span>
+					
+						<g:each in="${commercialFacilityInstance.activityAreas}" var="a">
+						<span class="property-value" aria-labelledby="activityAreas-label"><g:link controller="activityArea" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+
 			
 				<g:if test="${commercialFacilityInstance?.createdBy}">
 				<li class="fieldcontain">

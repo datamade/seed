@@ -11,11 +11,6 @@ class BuildingOperCertLookup {
 
 	static hasMany = [commercialFacilities: CommercialFacility]
 
-	static mapping = {
-		id column: "building_oper_cert_id_pk"
-		version false
-	}
-
 	static constraints = {
 		buildingOperatorCertificationType nullable: true, maxSize: 100
 		createdBy nullable: true

@@ -486,23 +486,6 @@
 	<g:textField name="updatedBy" maxlength="45" value="${facilityInstance?.updatedBy}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: facilityInstance, field: 'activityAreas', 'error')} ">
-	<label for="activityAreas">
-		<g:message code="facility.activityAreas.label" default="Activity Areas" />
-		
-	</label>
-	
-<ul class="one-to-many">
-<g:each in="${facilityInstance?.activityAreas?}" var="a">
-    <li><g:link controller="activityArea" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="activityArea" action="create" params="['facility.id': facilityInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'activityArea.label', default: 'ActivityArea')])}</g:link>
-</li>
-</ul>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: facilityInstance, field: 'buildingProfileStatusLookup', 'error')} required">
 	<label for="buildingProfileStatusLookup">
 		<g:message code="facility.buildingProfileStatusLookup.label" default="Building Profile Status Lookup" />
@@ -570,22 +553,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: facilityInstance, field: 'energyStarApplications', 'error')} ">
-	<label for="energyStarApplications">
-		<g:message code="facility.energyStarApplications.label" default="Energy Star Applications" />
-		
-	</label>
-	
-<ul class="one-to-many">
-<g:each in="${facilityInstance?.energyStarApplications?}" var="e">
-    <li><g:link controller="energyStarApplication" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="energyStarApplication" action="create" params="['facility.id': facilityInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'energyStarApplication.label', default: 'EnergyStarApplication')])}</g:link>
-</li>
-</ul>
-
-</div>
 
 <div class="fieldcontain ${hasErrors(bean: facilityInstance, field: 'energyUseMetrics', 'error')} ">
 	<label for="energyUseMetrics">

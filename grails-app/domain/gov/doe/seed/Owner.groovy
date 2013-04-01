@@ -16,11 +16,6 @@ class Owner {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "owner_id_pk"
-		version false
-	}
-
 	static constraints = {
 		ownerName nullable: true, maxSize: 45
 		ownerAddress1 nullable: true, maxSize: 100

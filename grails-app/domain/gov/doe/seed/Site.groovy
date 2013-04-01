@@ -28,11 +28,6 @@ class Site {
 	                  siteCityCodes: SiteCityCode]
 	static belongsTo = [ClimateZoneLookup, SiteComplexTypeLookup, SiteTypeLookup]
 
-	static mapping = {
-		id column: "site_id_pk"
-		version false
-	}
-
 	static constraints = {
 		city nullable: true, maxSize: 45
 		state nullable: true, maxSize: 45

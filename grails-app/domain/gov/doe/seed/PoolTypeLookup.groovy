@@ -11,11 +11,6 @@ class PoolTypeLookup {
 
 	static hasMany = [systemPools: SystemPool]
 
-	static mapping = {
-		id column: "pool_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		poolType maxSize: 100
 		sortOrder nullable: true

@@ -31,11 +31,6 @@ class SystemFenestration {
 
 	static belongsTo = [ExtDoorTypeLookup, ExtShadingOrientationLookup, ExtShadingTypeLookup, IntShadingTypeLookup, System, WindowFrameTypeLookup, WindowGlassLayerLookup, WindowGlassTypeLookup]
 
-	static mapping = {
-		id column: "system_fenestration_id_pk"
-		version false
-	}
-
 	static constraints = {
 		operableWindows nullable: true
 		windowsGlassFilled nullable: true

@@ -11,11 +11,6 @@ class ConfigurationLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "configuration_id_pk"
-		version false
-	}
-
 	static constraints = {
 		configuration nullable: true, maxSize: 45
 		sortOrder nullable: true

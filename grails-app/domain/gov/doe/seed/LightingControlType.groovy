@@ -11,11 +11,6 @@ class LightingControlType {
 
 	static hasMany = [systemLightings: SystemLighting]
 
-	static mapping = {
-		id column: "lighting_control_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		lightingControlType nullable: true, maxSize: 45
 		sortOrder nullable: true

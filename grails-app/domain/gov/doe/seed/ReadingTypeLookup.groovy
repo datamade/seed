@@ -12,11 +12,6 @@ class ReadingTypeLookup {
 
 	static hasMany = [energyUseMetrics: EnergyUseMetric]
 
-	static mapping = {
-		id column: "reading_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		readingType nullable: true, maxSize: 100
 		readingTypeDescription nullable: true, maxSize: 75

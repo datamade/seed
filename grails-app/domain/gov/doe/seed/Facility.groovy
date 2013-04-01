@@ -58,9 +58,7 @@ class Facility {
 	String notes
 	String serviceProductProvider
 	String createdBy
-	Date createdDate
 	String updatedBy
-	Date updatedDate
 	Owner owner
 	Site site
 	FacilityTypeLookup facilityTypeLookup
@@ -70,22 +68,18 @@ class Facility {
 	PropertyManagement propertyManagement
 	SurroundingTypeLookup surroundingTypeLookup
 	FootprintShapeLookup footprintShapeLookup
-
-	static hasMany = [activityAreas: ActivityArea,
-	                  certificationRatings: CertificationRating,
+	Date createdDate
+	Date updatedDate
+	
+	static hasMany = [certificationRatings: CertificationRating,
 	                  commercialFacilities: CommercialFacility,
 	                  energyEfficiencyMeasures: EnergyEfficiencyMeasure,
-	                  energyStarApplications: EnergyStarApplication,
 	                  energyUseMetrics: EnergyUseMetric,
 	                  residentialFacilities: ResidentialFacility,
 	                  systems: System,
 	                  waterUseMetrics: WaterUseMetric]
+	
 	static belongsTo = [BuildingProfileStatusLookup, FacilityTypeLookup, FootprintShapeLookup, OrientationTypeLookup, Owner, OwnershipStatusLookup, PropertyManagement, Site, SurroundingTypeLookup]
-
-	static mapping = {
-		id column: "facility_id_pk"
-		version false
-	}
 
 	static constraints = {
 		operatorTypeIdFk nullable: true
@@ -145,5 +139,17 @@ class Facility {
 		serviceProductProvider nullable: true, maxSize: 45
 		createdBy maxSize: 45
 		updatedBy maxSize: 45
+		owner nullable: true
+		site nullable: true
+		facilityTypeLookup nullable: true
+		orientationTypeLookup nullable: true
+		ownershipStatusLookup nullable: true
+		buildingProfileStatusLookup nullable: true
+		propertyManagement nullable: true
+		surroundingTypeLookup nullable: true
+		footprintShapeLookup nullable: true
+		createdDate nullable: true
+		updatedDate nullable: true
+		
 	}
 }

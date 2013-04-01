@@ -11,11 +11,6 @@ class BallastTypeLookup {
 
 	static hasMany = [systemLightings: SystemLighting]
 
-	static mapping = {
-		id column: "ballast_type_id_pk", generator: "assigned"
-		version false
-	}
-
 	static constraints = {
 		ballastType nullable: true, maxSize: 45
 		sortOrder nullable: true

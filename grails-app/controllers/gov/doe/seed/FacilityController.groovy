@@ -29,10 +29,14 @@
 package gov.doe.seed
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
 
 class FacilityController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    
+    def facilityService
+    
 
 	/*
 	 * Creates a UI for editing all the various parts of the Facility
@@ -138,4 +142,16 @@ class FacilityController {
             redirect(action: "show", id: id)
         }
     }
+   
+	def facilityDataByIdJSON = {
+		// println "params: ${params}"
+		def json = facilityService.getFacilityById(params)
+
+		print "JSON: ${json}"
+		render json
+		/*render(contentType:"text/json"){
+       		json       		
+    	}*/
+	}
+    
 }

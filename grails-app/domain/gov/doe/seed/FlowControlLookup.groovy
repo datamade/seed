@@ -11,11 +11,6 @@ class FlowControlLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "flow_control_id_pk"
-		version false
-	}
-
 	static constraints = {
 		flowControl nullable: true, maxSize: 45
 		sortOrder nullable: true

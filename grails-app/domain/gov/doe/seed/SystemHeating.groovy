@@ -27,11 +27,6 @@ class SystemHeating {
 	static hasMany = [heatingDistributionTypes: HeatingDistributionType]
 	static belongsTo = [BurnerTypeLookup, ControlTypeSystemLookup, DraftTypeLookup, EfficiencyUnitSystemLookup, FuelTypeLookup, HeatingTypeLookup, HotWaterResetLookup, SystemHeatingLocationLookup]
 
-	static mapping = {
-		id column: "system_heating_id_pk"
-		version false
-	}
-
 	static constraints = {
 		systemIdFk nullable: true
 		quantityHeating nullable: true

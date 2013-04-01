@@ -11,11 +11,6 @@ class BuildingProfileStatusLookup {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "building_profile_status_id_pk"
-		version false
-	}
-
 	static constraints = {
 		buildingProfileStatus nullable: true, maxSize: 45
 		sortOrder nullable: true

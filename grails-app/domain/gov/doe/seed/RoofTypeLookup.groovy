@@ -11,11 +11,6 @@ class RoofTypeLookup {
 
 	static hasMany = [systemRoofs: SystemRoof]
 
-	static mapping = {
-		id column: "roof_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		roofType maxSize: 100
 		createdBy nullable: true, maxSize: 45

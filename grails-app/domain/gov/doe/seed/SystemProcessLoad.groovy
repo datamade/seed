@@ -13,11 +13,6 @@ class SystemProcessLoad {
 
 	static belongsTo = [FuelTypeLookup, ProcessLoadLookup, System]
 
-	static mapping = {
-		id column: "system_process_load_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityProcess nullable: true
 		efficiencyProcess nullable: true

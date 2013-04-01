@@ -26,11 +26,6 @@ class SystemCooling {
 
 	static belongsTo = [ChilledWaterResetLookup, ChillerCompTypeLookup, ChillerCoolingTypeLookup, ControlTypeSystemLookup, CoolingTowerControlLookup, CoolingTypeLookup, EfficiencyUnitSystemLookup, FuelTypeLookup, System, SystemCoolingLocationLookup]
 
-	static mapping = {
-		id column: "system_cooling_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityCooling nullable: true
 		capacityCooling nullable: true

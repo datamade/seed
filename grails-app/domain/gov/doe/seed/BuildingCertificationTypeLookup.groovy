@@ -11,11 +11,6 @@ class BuildingCertificationTypeLookup {
 
 	static hasMany = [certificationRatings: CertificationRating]
 
-	static mapping = {
-		id column: "bldg_cert_id_pk"
-		version false
-	}
-
 	static constraints = {
 		bldgCertType maxSize: 100
 		sortOrder nullable: true

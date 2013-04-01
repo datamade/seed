@@ -24,10 +24,6 @@ class ResidentialFacility {
 	Integer numOfAdults
 	Integer numOfChildren
 	Integer numOfNonBedrooms
-	String createdBy
-	Date createdDate
-	String updatedBy
-	Date updatedDate
 	OccupantIncomeLookup occupantIncomeLookup
 	ResFacilityTypeLookup resFacilityTypeLookup
 	ResPopulationLookup resPopulationLookup
@@ -35,13 +31,13 @@ class ResidentialFacility {
 	Facility facility
 	OccupantEducationLookup occupantEducationLookup
 	FloorPlanTypeLookup floorPlanTypeLookup
+	Date createdDate
+	Date updatedDate
+	String createdBy
+	String updatedBy
+	
 
 	static belongsTo = [Facility, FloorPlanTypeLookup, HouseholdTypeLookup, OccupantEducationLookup, OccupantIncomeLookup, ResFacilityTypeLookup, ResPopulationLookup]
-
-	static mapping = {
-		id column: "residential_facility_id_pk"
-		version false
-	}
 
 	static constraints = {
 		percOccupiedOwner nullable: true
@@ -66,8 +62,17 @@ class ResidentialFacility {
 		numOfAdults nullable: true
 		numOfChildren nullable: true
 		numOfNonBedrooms nullable: true
-		createdBy nullable: true, maxSize: 45
-		updatedBy maxSize: 45
+		occupantIncomeLookup nullable: true
+		resFacilityTypeLookup nullable: true
+		resPopulationLookup nullable: true
+		householdTypeLookup nullable: true
+		occupantEducationLookup nullable: true
+		floorPlanTypeLookup nullable: true
+		facility nullable: true
+		createdDate nullable: true
 		updatedDate nullable: true
+		createdBy nullable: true, maxSize: 45
+		updatedBy nullable: true, maxSize: 45
+		
 	}
 }

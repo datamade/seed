@@ -13,11 +13,6 @@ class SystemRefrigeration {
 
 	static belongsTo = [RefrigDoorTypeLookup, RefrigTypeLookup, System]
 
-	static mapping = {
-		id column: "system_refrigeration_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityRefrig nullable: true
 		sizeRefirg nullable: true

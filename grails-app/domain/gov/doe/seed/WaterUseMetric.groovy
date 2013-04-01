@@ -30,11 +30,6 @@ class WaterUseMetric {
 	static hasMany = [waterTimeSerieses: WaterTimeSeries]
 	static belongsTo = [Facility, MetricTypeLookup, UnitTypeLookup]
 
-	static mapping = {
-		id column: "water_use_metric_id_pk"
-		version false
-	}
-
 	static constraints = {
 		pmMeterId nullable: true, maxSize: 45
 		espMeterId nullable: true, maxSize: 45

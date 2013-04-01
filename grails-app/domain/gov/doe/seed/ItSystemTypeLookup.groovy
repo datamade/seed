@@ -11,11 +11,6 @@ class ItSystemTypeLookup {
 
 	static hasMany = [systemIts: SystemIt]
 
-	static mapping = {
-		id column: "it_system_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		itSystemType maxSize: 100
 		createdBy nullable: true, maxSize: 45

@@ -12,11 +12,6 @@ class SiteComplexTypeLookup {
 
 	static hasMany = [sites: Site]
 
-	static mapping = {
-		id column: "site_complex_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		siteComplexType nullable: true, maxSize: 100
 		siteComplexTypeDescription nullable: true, maxSize: 100

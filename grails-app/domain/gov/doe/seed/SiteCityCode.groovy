@@ -8,11 +8,6 @@ class SiteCityCode {
 
 	static belongsTo = [Site]
 
-	static mapping = {
-		id column: "site_city_code_id_pk"
-		version false
-	}
-
 	static constraints = {
 		cityCodeId nullable: true, maxSize: 45
 		cityCodeName nullable: true, maxSize: 45

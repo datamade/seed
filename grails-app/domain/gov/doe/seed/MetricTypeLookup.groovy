@@ -12,11 +12,6 @@ class MetricTypeLookup {
 
 	static hasMany = [waterUseMetrics: WaterUseMetric]
 
-	static mapping = {
-		id column: "metric_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		metricType nullable: true, maxSize: 100
 		metricTypeDescription nullable: true, maxSize: 100

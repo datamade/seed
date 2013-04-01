@@ -9,11 +9,6 @@ class SystemConveyance {
 
 	static belongsTo = [ControlTypeSystemLookup, ConveyanceTypeLookup, System]
 
-	static mapping = {
-		id column: "system_conveyance_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityConveyance nullable: true
 	}

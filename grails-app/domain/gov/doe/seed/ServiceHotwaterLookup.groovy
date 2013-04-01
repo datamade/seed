@@ -11,11 +11,6 @@ class ServiceHotwaterLookup {
 
 	static hasMany = [systemHotwaters: SystemHotwater]
 
-	static mapping = {
-		id column: "serv_hotwater_id_pk"
-		version false
-	}
-
 	static constraints = {
 		servHotwaterType maxSize: 100
 		sortOrder nullable: true

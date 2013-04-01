@@ -39,18 +39,14 @@ class ActivityArea {
 	Boolean dormComputerLab
 	Boolean hospitalTertiaryCare
 	String createdBy
-	Date createdDate
 	String updatedBy
+	Date createdDate
 	Date updatedDate
 	ActivityAreaTypeLookup activityAreaTypeLookup
-	Facility facility
+	CommercialFacility commercialFacility
 
-	static belongsTo = [ActivityAreaTypeLookup, Facility]
+	static belongsTo = [ActivityAreaTypeLookup, CommercialFacility]
 
-	static mapping = {
-		id column: "activity_area_id_pk"
-		version false
-	}
 
 	static constraints = {
 		grossFloorArea nullable: true
@@ -91,5 +87,9 @@ class ActivityArea {
 		hospitalTertiaryCare nullable: true
 		createdBy maxSize: 45
 		updatedBy maxSize: 45
+		activityAreaTypeLookup nullable:true
+		commercialFacility nullable: true
+		createdDate nullable: true
+		updatedDate nullable: true
 	}
 }

@@ -12,11 +12,6 @@ class OperatorTypeLookup {
 
 	static belongsTo = [FacilityTypeLookup]
 
-	static mapping = {
-		id column: "operator_type_id", generator: "assigned"
-		version false
-	}
-
 	static constraints = {
 		operatorType nullable: true, maxSize: 45
 		sortOrder nullable: true

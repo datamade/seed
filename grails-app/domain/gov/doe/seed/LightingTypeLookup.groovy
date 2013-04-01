@@ -11,11 +11,6 @@ class LightingTypeLookup {
 
 	static hasMany = [systemLightings: SystemLighting]
 
-	static mapping = {
-		id column: "lighting_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		lightingType maxSize: 100
 		sortOrder nullable: true

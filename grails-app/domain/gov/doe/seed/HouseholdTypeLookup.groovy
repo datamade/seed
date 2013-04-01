@@ -11,11 +11,6 @@ class HouseholdTypeLookup {
 
 	static hasMany = [residentialFacilities: ResidentialFacility]
 
-	static mapping = {
-		id column: "household_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		householdTypes maxSize: 100
 		sortOrder nullable: true

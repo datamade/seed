@@ -11,11 +11,6 @@ class SystemLaundry {
 
 	static belongsTo = [FuelTypeLookup, LaundryTypeLookup, System]
 
-	static mapping = {
-		id column: "system_laundry_id_pk"
-		version false
-	}
-
 	static constraints = {
 		yearOfManuLaundry nullable: true
 		energyStarLaundry nullable: true

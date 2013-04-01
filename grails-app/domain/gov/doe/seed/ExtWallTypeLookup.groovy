@@ -11,11 +11,6 @@ class ExtWallTypeLookup {
 
 	static hasMany = [systemWalls: SystemWall]
 
-	static mapping = {
-		id column: "ext_walltype_id_pk"
-		version false
-	}
-
 	static constraints = {
 		extWallType maxSize: 100
 		sortOrder nullable: true

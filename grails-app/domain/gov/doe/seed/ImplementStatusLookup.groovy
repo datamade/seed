@@ -7,11 +7,6 @@ class ImplementStatusLookup {
 
 	static hasMany = [energyEfficiencyMeasures: EnergyEfficiencyMeasure]
 
-	static mapping = {
-		id column: "implement_status_id_pk"
-		version false
-	}
-
 	static constraints = {
 		implementStatus nullable: true, maxSize: 45
 		sortOrder nullable: true

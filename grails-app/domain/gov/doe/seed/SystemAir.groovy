@@ -43,11 +43,6 @@ class SystemAir {
 
 	static belongsTo = [BucketTypeLookup, ConfigurationLookup, CoolingSourceLookup, DehumidificationLookup, DuctConfigurationLookup, DuctInsulationLookup, DuctLocationLookup, DuctSealingLookup, DuctTypeLookup, EconomizerLookup, EfficiencyUnitSystemLookup, FanControlTypeLookup, FanPlacementLookup, FlowConfigurationLookup, FlowControlLookup, HeatRecoveryLookup, HeatingSourceLookup, HumidificationLookup, PreheatSourceLookup, System]
 
-	static mapping = {
-		id column: "system_air_id_pk"
-		version false
-	}
-
 	static constraints = {
 		airDistributionSize nullable: true
 		airDistributionPower nullable: true

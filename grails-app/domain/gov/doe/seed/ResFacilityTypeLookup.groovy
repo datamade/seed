@@ -10,11 +10,6 @@ class ResFacilityTypeLookup {
 
 	static hasMany = [residentialFacilities: ResidentialFacility]
 
-	static mapping = {
-		id column: "res_facility_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		residentialFacilityType maxSize: 100
 		createdBy maxSize: 45

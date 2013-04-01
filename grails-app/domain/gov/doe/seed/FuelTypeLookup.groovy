@@ -24,11 +24,6 @@ class FuelTypeLookup {
 	                  systemZonalCoolings: SystemZonalCooling,
 	                  systemZonalHeatings: SystemZonalHeating]
 
-	static mapping = {
-		id column: "fuel_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		fuelType nullable: true, maxSize: 100
 		fuelTypeDescription nullable: true, maxSize: 100

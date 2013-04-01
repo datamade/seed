@@ -16,11 +16,6 @@ class SystemZonalHeating {
 
 	static belongsTo = [ControlTypeSystemLookup, FuelTypeLookup, System, ZonalHeatingTypeLookup]
 
-	static mapping = {
-		id column: "system_zonal_heating_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityZheating nullable: true
 		yearOfManufactureZheating nullable: true

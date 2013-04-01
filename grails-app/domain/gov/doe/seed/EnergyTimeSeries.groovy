@@ -15,11 +15,6 @@ class EnergyTimeSeries {
 
 	static belongsTo = [EnergyUseMetric]
 
-	static mapping = {
-		id column: "energy_time_series_id_pk"
-		version false
-	}
-
 	static constraints = {
 		readingNumber nullable: true
 		intervalPeak nullable: true, maxSize: 45

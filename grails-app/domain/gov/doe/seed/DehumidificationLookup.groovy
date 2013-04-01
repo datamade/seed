@@ -11,11 +11,6 @@ class DehumidificationLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "dehumidification_id_pk"
-		version false
-	}
-
 	static constraints = {
 		dehumidificaton nullable: true, maxSize: 45
 		sortOrder nullable: true

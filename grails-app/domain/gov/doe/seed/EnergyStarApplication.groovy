@@ -11,14 +11,9 @@ class EnergyStarApplication {
 	String updatedBy
 	Date updatedDate
 	EnergyStarAppStatusLookup energyStarAppStatusLookup
-	Facility facility
+	EnergyEfficiencyMeasure energyEfficiencyMeasure
 
-	static belongsTo = [EnergyStarAppStatusLookup, Facility]
-
-	static mapping = {
-		id column: "energy_star_app_id_pk"
-		version false
-	}
+	static belongsTo = [EnergyStarAppStatusLookup, EnergyEfficiencyMeasure]
 
 	static constraints = {
 		eligibility nullable: true, maxSize: 100

@@ -15,8 +15,4 @@ class ControlTypeSystemLookup {
 	                  systemZonalHeatings: SystemZonalHeating]
 	static belongsTo = [ControlTypeLookup, SystemTypeLookup]
 
-	static mapping = {
-		id column: "control_type_system_id_pk"
-		version false
-	}
 }

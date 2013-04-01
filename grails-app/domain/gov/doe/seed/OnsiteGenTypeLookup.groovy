@@ -11,11 +11,6 @@ class OnsiteGenTypeLookup {
 
 	static hasMany = [systemOnsites: SystemOnsite]
 
-	static mapping = {
-		id column: "onsite_gen_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		onsiteGenerationType maxSize: 100
 		sortOrder nullable: true

@@ -11,11 +11,6 @@ class DuctInsulationLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "duct_insulation_id_pk"
-		version false
-	}
-
 	static constraints = {
 		ductInsulation nullable: true, maxSize: 45
 		sortOrder nullable: true

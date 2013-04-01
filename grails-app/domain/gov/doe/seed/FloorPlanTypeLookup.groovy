@@ -7,11 +7,6 @@ class FloorPlanTypeLookup {
 
 	static hasMany = [residentialFacilities: ResidentialFacility]
 
-	static mapping = {
-		id column: "floor_plan_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		floorPlanType maxSize: 45
 	}

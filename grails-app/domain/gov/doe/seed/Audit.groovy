@@ -22,11 +22,6 @@ class Audit {
 
 	static belongsTo = [AuditorMemCertLookup, AuditorQualLookup, EnergyEfficiencyMeasure]
 
-	static mapping = {
-		id column: "audit_id_pk"
-		version false
-	}
-
 	static constraints = {
 		auditDate nullable: true
 		auditorName maxSize: 100

@@ -11,11 +11,6 @@ class LaundryTypeLookup {
 
 	static hasMany = [systemLaundries: SystemLaundry]
 
-	static mapping = {
-		id column: "laundry_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		laundryType maxSize: 100
 		sortOrder nullable: true

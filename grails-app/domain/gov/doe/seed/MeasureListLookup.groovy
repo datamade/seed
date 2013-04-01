@@ -11,11 +11,6 @@ class MeasureListLookup {
 
 	static hasMany = [energyEfficiencyMeasures: EnergyEfficiencyMeasure]
 
-	static mapping = {
-		id column: "measure_list_id_pk"
-		version false
-	}
-
 	static constraints = {
 		measureList maxSize: 100
 		createdBy nullable: true, maxSize: 45

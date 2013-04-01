@@ -15,11 +15,6 @@ class SystemPool {
 
 	static belongsTo = [ControlTypeSystemLookup, FuelTypeLookup, PoolTypeLookup, System]
 
-	static mapping = {
-		id column: "system_pool_id_pk"
-		version false
-	}
-
 	static constraints = {
 		quantityPool nullable: true
 		heatedPool nullable: true

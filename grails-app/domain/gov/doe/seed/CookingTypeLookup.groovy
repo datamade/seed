@@ -11,11 +11,6 @@ class CookingTypeLookup {
 
 	static hasMany = [systemCookings: SystemCooking]
 
-	static mapping = {
-		id column: "cooking_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		cookingType maxSize: 100
 		createdBy nullable: true, maxSize: 45

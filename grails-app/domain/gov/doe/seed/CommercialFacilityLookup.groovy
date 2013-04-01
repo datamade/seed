@@ -10,11 +10,6 @@ class CommercialFacilityLookup {
 
 	static hasMany = [commercialFacilities: CommercialFacility]
 
-	static mapping = {
-		id column: "comm_facility_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		commFacilityType maxSize: 100
 		createdBy maxSize: 45

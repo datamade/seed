@@ -11,11 +11,6 @@ class SurroundingTypeLookup {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "surrounding_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		surroundingType nullable: true, maxSize: 100
 		sortOrder nullable: true

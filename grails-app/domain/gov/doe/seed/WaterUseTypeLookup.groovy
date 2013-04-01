@@ -11,11 +11,6 @@ class WaterUseTypeLookup {
 
 	static hasMany = [energyUseMetrics: EnergyUseMetric]
 
-	static mapping = {
-		id column: "water_use_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		waterUseType maxSize: 100
 		sortOrder nullable: true

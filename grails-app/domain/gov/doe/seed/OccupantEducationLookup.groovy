@@ -11,11 +11,6 @@ class OccupantEducationLookup {
 
 	static hasMany = [residentialFacilities: ResidentialFacility]
 
-	static mapping = {
-		id column: "occupant_education_id_pk"
-		version false
-	}
-
 	static constraints = {
 		occupantEducationType maxSize: 100
 		sortOrder nullable: true

@@ -13,11 +13,6 @@ class SystemFoundation {
 
 	static belongsTo = [FloorTypeLookup, GroundCouplingLookup, System]
 
-	static mapping = {
-		id column: "system_foundation_id_pk"
-		version false
-	}
-
 	static constraints = {
 		perimeterInsulated nullable: true
 		floorInsulationThickness nullable: true

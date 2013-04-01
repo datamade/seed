@@ -11,11 +11,6 @@ class OwnershipStatusLookup {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "ownership_status_id_pk"
-		version false
-	}
-
 	static constraints = {
 		ownershipStatus maxSize: 100
 		sortOrder nullable: true

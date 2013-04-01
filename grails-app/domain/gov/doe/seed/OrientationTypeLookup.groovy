@@ -11,11 +11,6 @@ class OrientationTypeLookup {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "orientation_type_id"
-		version false
-	}
-
 	static constraints = {
 		orientationType nullable: true, maxSize: 45
 		sortOrder nullable: true

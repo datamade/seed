@@ -11,11 +11,6 @@ class RefrigTypeLookup {
 
 	static hasMany = [systemRefrigerations: SystemRefrigeration]
 
-	static mapping = {
-		id column: "refrig_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		refrigType maxSize: 100
 		sortOrder nullable: true

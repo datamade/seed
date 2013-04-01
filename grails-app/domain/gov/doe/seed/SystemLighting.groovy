@@ -18,11 +18,6 @@ class SystemLighting {
 
 	static belongsTo = [BallastTypeLookup, LightingControlType, LightingHourLookup, LightingTypeLookup, System]
 
-	static mapping = {
-		id column: "system_lighting_id_pk"
-		version false
-	}
-
 	static constraints = {
 		installedPower nullable: true
 		percTotInstalledPowerHeating nullable: true

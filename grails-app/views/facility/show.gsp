@@ -564,17 +564,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${facilityInstance?.activityAreas}">
-				<li class="fieldcontain">
-					<span id="activityAreas-label" class="property-label"><g:message code="facility.activityAreas.label" default="Activity Areas" /></span>
-					
-						<g:each in="${facilityInstance.activityAreas}" var="a">
-						<span class="property-value" aria-labelledby="activityAreas-label"><g:link controller="activityArea" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
+		
 				<g:if test="${facilityInstance?.buildingProfileStatusLookup}">
 				<li class="fieldcontain">
 					<span id="buildingProfileStatusLookup-label" class="property-label"><g:message code="facility.buildingProfileStatusLookup.label" default="Building Profile Status Lookup" /></span>
@@ -626,17 +616,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${facilityInstance?.energyStarApplications}">
-				<li class="fieldcontain">
-					<span id="energyStarApplications-label" class="property-label"><g:message code="facility.energyStarApplications.label" default="Energy Star Applications" /></span>
-					
-						<g:each in="${facilityInstance.energyStarApplications}" var="e">
-						<span class="property-value" aria-labelledby="energyStarApplications-label"><g:link controller="energyStarApplication" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
+		
 				<g:if test="${facilityInstance?.energyUseMetrics}">
 				<li class="fieldcontain">
 					<span id="energyUseMetrics-label" class="property-label"><g:message code="facility.energyUseMetrics.label" default="Energy Use Metrics" /></span>

@@ -94,6 +94,23 @@
 	<g:textField name="buildingOperatorCertState" maxlength="45" value="${commercialFacilityInstance?.buildingOperatorCertState}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: commercialFacilityInstance, field: 'activityAreas', 'error')} ">
+	<label for="activityAreas">
+		<g:message code="commercialFacility.activityAreas.label" default="Activity Areas" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${commercialFacilityInstance?.activityAreas?}" var="a">
+    <li><g:link controller="activityArea" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="activityArea" action="create" params="['commercialFacility.id': commercialFacilityInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'activityArea.label', default: 'ActivityArea')])}</g:link>
+</li>
+</ul>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: commercialFacilityInstance, field: 'createdBy', 'error')} ">
 	<label for="createdBy">
 		<g:message code="commercialFacility.createdBy.label" default="Created By" />

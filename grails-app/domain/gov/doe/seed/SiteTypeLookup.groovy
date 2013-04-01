@@ -11,11 +11,6 @@ class SiteTypeLookup {
 
 	static hasMany = [sites: Site]
 
-	static mapping = {
-		id column: "site_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		siteType nullable: true, maxSize: 45
 		sortOrder nullable: true

@@ -11,11 +11,6 @@ class BurnerTypeLookup {
 
 	static hasMany = [systemHeatings: SystemHeating]
 
-	static mapping = {
-		id column: "burner_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		burnerType nullable: true, maxSize: 45
 		sortOrder nullable: true

@@ -11,11 +11,6 @@ class DuctConfigurationLookup {
 
 	static hasMany = [systemAirs: SystemAir]
 
-	static mapping = {
-		id column: "duct_configuration_id_pk"
-		version false
-	}
-
 	static constraints = {
 		ductConfiguration nullable: true, maxSize: 45
 		sortOrder nullable: true

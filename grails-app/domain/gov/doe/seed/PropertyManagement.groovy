@@ -14,11 +14,6 @@ class PropertyManagement {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "property_mgmt_id_pk"
-		version false
-	}
-
 	static constraints = {
 		propertyManagementContact nullable: true, maxSize: 100
 		propertyManagementAddress nullable: true, maxSize: 100

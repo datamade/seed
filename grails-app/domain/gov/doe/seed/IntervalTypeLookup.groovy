@@ -12,11 +12,6 @@ class IntervalTypeLookup {
 
 	static hasMany = [energyUseMetrics: EnergyUseMetric]
 
-	static mapping = {
-		id column: "interval_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		intervalType nullable: true, maxSize: 100
 		intervalTypeDescription nullable: true, maxSize: 75

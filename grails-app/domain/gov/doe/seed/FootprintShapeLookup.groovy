@@ -11,11 +11,6 @@ class FootprintShapeLookup {
 
 	static hasMany = [facilities: Facility]
 
-	static mapping = {
-		id column: "footprint_shape_id_pk"
-		version false
-	}
-
 	static constraints = {
 		footprintShapeType maxSize: 100
 		sortOrder nullable: true

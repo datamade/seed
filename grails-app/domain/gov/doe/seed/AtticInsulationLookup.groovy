@@ -11,11 +11,6 @@ class AtticInsulationLookup {
 
 	static hasMany = [systemRoofs: SystemRoof]
 
-	static mapping = {
-		id column: "attic_insulation_id_pk"
-		version false
-	}
-
 	static constraints = {
 		atticInsulationType maxSize: 100
 		createdBy nullable: true, maxSize: 45

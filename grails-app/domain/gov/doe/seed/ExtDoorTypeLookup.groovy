@@ -7,11 +7,6 @@ class ExtDoorTypeLookup {
 
 	static hasMany = [systemFenestrations: SystemFenestration]
 
-	static mapping = {
-		id column: "ext_door_type_id_pk"
-		version false
-	}
-
 	static constraints = {
 		exteriorDoorType nullable: true, maxSize: 45
 		sortOrder nullable: true
